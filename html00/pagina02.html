@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="loadXMLDoc()">Ejecutar función</button>
+    <table id="demo"></table>
+
+    <script>
+        // Función principal usando async/await y fetch
+        const loadXMLDoc = async () => {
+          try {
+            // const response = await fetch('cd_catalog.xml');
+            const response = await fetch('https://www.w3schools.com/js/cd_catalog.xml');
+            const text = await response.text();
+            console.log(text)
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(text, "application/xml");
+            console.log(xmlDoc)
+            const cds = xmlDoc.getElementsByTagName("CD");
+            myFunction(cds);
+          } catch (error) {
+            console.error('Error loading XML:', error);
+          }
+        };
+      
+        const myFunction = (cds) => {
+          let table = "<tr><th>Artist</th><th>Title</th></tr>";
+          Array.from(cds).forEach(cd => {
+            const artist = cd.getElementsByTagName("ARTIST")[0]?.textContent || "N/A";
+            const title = cd.getElementsByTagName("TITLE")[0]?.textContent || "N/A";
+            table += `<tr><td>${artist}</td><td>${title}</td></tr>`;
+          });
+          document.getElementById("demo").innerHTML = table;
+        };
+      </script>
+      
+</body>
+</html>
