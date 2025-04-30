@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            box-shadow: 10px 20px 20px red;
+        }
+        figure {
+            display: inline-block;
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1{Random Pictures}(figure>img[src="https://picsum.com/id/$/200/200"]+figcaption)*2 -->
+    <h1>Random Pictures</h1>
+    <div id="app">
+        <!-- <figure>
+            <img src="https://picsum.photos/id/1/200/200" alt="">
+            <figcaption>John</figcaption>
+        </figure> -->
+    </div>
+
+    <script>
+        // a continuación voy a usar el api DOM de javascript
+        console.log("imprime mensaje a la consola")
+
+        const  x = document.getElementById("app")
+        console.log(x)
+
+        // x.innerHTML = imagen(1) + imagen(2) + imagen(3)
+        // for (let i = 1; i < 10; i++) {
+        //     x.innerHTML = x.innerHTML + xy(i)
+        // }
+
+        function imagen(id) {
+            const c = '<figure>' +
+            '<img src="https://picsum.photos/id/'+id+'/200/200" alt="">' +
+            '<figcaption>John</figcaption>' +
+            '</figure> ' 
+            return c
+        }
+
+        // función anónima asignada a la constante Picture
+        // const Picture = function (){ return "hola" };
+
+        // función anónima de tipo arrow function asignada la constante Picture
+        const Picture = (id) => {
+            return `<figure>
+            <img src="https://picsum.photos/id/${id}/200/200" alt="">
+            <figcaption>John</figcaption>
+            </figure>`
+        };
+
+        // cuidar que Picture ya esté inicializada
+        x.innerHTML = Picture(1) + Picture(2) + Picture(3)
+    </script>
+</body>
+</html>
