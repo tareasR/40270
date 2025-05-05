@@ -1,0 +1,8 @@
+img {
+    box-shadow: 10px 20px 30px red;
+    border-radius: 50%;
+}
+
+img.redonda {
+    border-radius: 10% 20% 30% 70%;
+}
