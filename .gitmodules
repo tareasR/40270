@@ -1,0 +1,3 @@
+[submodule "starwars"]
+	path = starwars
+	url = https://github.com/tareasR/starwars.git
