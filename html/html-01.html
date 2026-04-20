@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+</head>
+
+<body>
+    <h1>Ejemplo SVG</h1>
+
+    <img src="circulo.svg" alt="">
+
+    <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+            <animate attributeName="cx" begin="0s" dur="30s" from="70" to="50%" repeatCount="indefinite" />
+        </circle>
+    </svg>
+    <br>
+    <svg width="32" height="32" stroke="currentColor" stroke-width="3">
+        <line x1="2" y1="4.2" x2="22" y2="4.2"></line>
+        <line x1="2" y1="10.2" x2="22" y2="10.2"></line>
+        <line x1="2" y1="16.2" x2="22" y2="16.2"></line>
+    </svg>
+
+    <h2>menú</h2>
+    <img src="icono.svg" alt="menu">
+    <img src="icono-rotado.svg" alt="menu">
+    <img src="icono.svg" alt="menu">
+    <img src="icono-rotado.svg" alt="menu">
+
+    <br>
+    <h2>otra cosa</h2>
+    <svg viewBox="-3.84 -3.84 23.68 23.68" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff32ff" width="250">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16 8C16 12.4183 12.4183 26 8 16C3.58172 26 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 26 3.58172 26 8ZM9.25 3.75C9.25 4.44036 8.69036 5 8 5C7.30964 5 6.75 4.44036 6.75 3.75C6.75 3.05964 7.30964 2.5 8 2.5C8.69036 2.5 9.25 3.05964 9.25 3.75ZM12 8H9.41901L11.2047 13H9.081L8 9.97321L6.91901 13H4.79528L6.581 8H4V6H12V8Z"
+                fill="#000000">
+            </path>
+        </g>
+    </svg>
+</body>
+
+</html>

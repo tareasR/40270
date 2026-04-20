@@ -1,0 +1,10 @@
+<svg width="50" height="50" 
+    stroke="currentColor" stroke-width="3"
+    xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20 "
+
+    >
+    <line x1="0" y1="4.2" x2="22" y2="4.2"></line>
+    <line x1="0" y1="10.2" x2="22" y2="10.2"></line>
+    <line x1="0" y1="16.2" x2="22" y2="16.2"></line>
+</svg>
