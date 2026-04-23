@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE autos [
+    <!ELEMENT autos (auto*)>
+    <!ELEMENT auto (modelo, marca, color, (placas | permiso+))>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+    <!ELEMENT placas (#PCDATA)>
+    <!ELEMENT permiso (#PCDATA)>
+    <!ATTLIST placas ESTADO ( vr | mx | pb) "vr" >
+]>
+<autos>
+    <auto>
+        <modelo>Tsuru</modelo>
+        <marca>Nissan</marca>
+        <color>Blanco</color>
+        <placas ESTADO="vr">7D48S4</placas>
+    </auto>
+    <auto>
+        <modelo>Tsuru</modelo>
+        <marca>Nissan</marca>
+        <color>Blanco</color>
+        <permiso>7D48S4</permiso>
+        <permiso>7D48S4</permiso>
+    </auto>
+</autos>

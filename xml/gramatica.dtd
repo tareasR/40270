@@ -1,0 +1,6 @@
+    <!ELEMENT autos (auto*)>
+    <!ELEMENT auto (modelo, marca, color, placas)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+    <!ELEMENT placas (#PCDATA)>
