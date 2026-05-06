@@ -1,0 +1,30 @@
+body {
+    max-width: 500px;
+}
+
+button {
+    width: 33.3%;
+    height: 20px;
+    padding: 10%;
+    /* padding-bottom: 20px;
+    padding-top: 20px; */
+}
+
+button[id="b0"]{
+    width: 100%;
+}
+
+div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 100%;
+}
+
+.operadores {
+    background-color: bisque;
+    width: 33.3%;
+}

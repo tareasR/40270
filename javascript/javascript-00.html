@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="id1">Título</h1>
+    <h2 id="id2">DOM Document Object Model</h2>
+    <h2>API Application Programming Interface</h2>
+    <p id="id3">Esto es un párrafo</p>
+    <button id="id4" onclick="escribir()">Hola</button>
+
+    <!-- Elementos de formulario -->
+    <input type="text">
+
+    <script>
+        // esto es un comentario
+        // var elemento = 1
+        // let elemento = "uno"
+        const elemento = [1, 2, 3, 4]
+
+        function nombre() {
+            console.log("hola mundo")
+        }
+
+        for (k in elemento)
+            console.log(elemento[k])
+
+        for (i = 0; i < elemento.length; i++)
+            console.log(elemento[i])
+
+        console.log(elemento)
+        for (i = 0; i < 10; i++)
+            if (i != 5)
+                console.log("hola mundo")
+        nombre()
+
+        // manipulación del DOM
+        let html = document
+        let html2 = html.getElementById("id1")
+        console.log(html2.innerText)
+        html2.innerText = "Fin de la clase"
+
+        function escribir() {
+            let entrada = document.getElementsByTagName("input")
+            console.log(entrada)
+            for (const key in entrada) {
+                if (Object.prototype.hasOwnProperty.call(entrada, key)) {
+                    const element = entrada[key];
+                    console.log(element)
+                }
+            }
+            let valor_entrada = entrada[0].value
+            console.log(valor_entrada)
+            html2.innerText = valor_entrada
+        }
+    </script>
+</body>
+
+</html>
