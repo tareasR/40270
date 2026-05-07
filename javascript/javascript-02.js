@@ -27,6 +27,8 @@ for (const key in operadores) {
             boton.addEventListener("click", borrar)
         if (boton.innerText == "+")
             boton.addEventListener("click", sumar)
+        if (boton.innerText == "=")
+            boton.addEventListener("click", igual)
         boton.addEventListener("click", pintar2)
     }
 }
@@ -47,7 +49,7 @@ function sumar(e) {
 }
 
 function igual() {
-    let prm2 = resultado.value 
+    let prm2 = resultado.value
     if (operacion == "+") {
         resultado.value = parseInt(prm) + parseInt(prm2)
     }
