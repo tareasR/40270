@@ -27,6 +27,12 @@ for (const key in operadores) {
             boton.addEventListener("click", borrar)
         if (boton.innerText == "+")
             boton.addEventListener("click", sumar)
+        if (boton.innerText == "-")
+            boton.addEventListener("click", restar)
+        if (boton.innerText == "*")
+            boton.addEventListener("click", multiplicar)
+        if (boton.innerText == "/")
+            boton.addEventListener("click", dividir)
         if (boton.innerText == "=")
             boton.addEventListener("click", igual)
         boton.addEventListener("click", pintar2)
@@ -47,11 +53,38 @@ function sumar(e) {
     resultado.value = ""
     e.target.style.backgroundColor = "red"
 }
+function restar(e) {
+    prm = resultado.value
+    operacion = e.target.innerText
+    resultado.value = ""
+    e.target.style.backgroundColor = "red"
+}
+function multiplicar(e) {
+    prm = resultado.value
+    operacion = e.target.innerText
+    resultado.value = ""
+    e.target.style.backgroundColor = "red"
+}
+function dividir(e) {
+    prm = resultado.value
+    operacion = e.target.innerText
+    resultado.value = ""
+    e.target.style.backgroundColor = "red"
+}
 
 function igual() {
     let prm2 = resultado.value
     if (operacion == "+") {
         resultado.value = parseInt(prm) + parseInt(prm2)
+    }
+    if (operacion == "-") {
+        resultado.value = parseInt(prm) - parseInt(prm2)
+    }
+    if (operacion == "*") {
+        resultado.value = parseInt(prm) * parseInt(prm2)
+    }
+    if (operacion == "/") {
+        resultado.value = parseInt(prm) / parseInt(prm2)
     }
 
 }
